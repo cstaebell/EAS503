@@ -56,7 +56,7 @@ dataset['product_detail'].replace('Jamacian Coffee River', 'Jamaican Coffee Rive
 #%%
 
 
-#%% FIX THIS show some kind of python pre-processing for finding out that price is not inherent to product but transaction?
+#%% 
 len(dataset['unit_price'].unique()) == len(dataset['product_id'].unique()) # price is not a property of product.
 len(dataset['unit_price'].unique()) == len(dataset['transaction_id'].unique())
 #%% save processed file

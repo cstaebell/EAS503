@@ -1,0 +1,2 @@
+# Coffee Shop Sales
+Python visualizations and SQL queries (SQLite) were leveraged to gain operational insights for a simulated coffee shop sales dataset. Product offerings and transaction times were analyzed to yield actionable data-driven recommendations. A companion article discusses the findings and their significance for our fictitious coffee shop for a public audience, and a stakeholder report summarizes the more technical details for an internal company audience.

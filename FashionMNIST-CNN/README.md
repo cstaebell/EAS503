@@ -1,0 +1,4 @@
+# Fashion MNIST Convolutional Neural Network
+The Fashion MNIST dataset contains labeled images of wardrobe items. The dataset is split into test and training sets. The training dataset has 60,000 28 x 28 grayscale images and the test set has 10,000 28 x 28 images. Each pixel can take on values from 0 to 255. Each image is labeled with an integer value 0 to 9 corresponding to a class.
+
+Keras is used to build a basic CNN with two hidden layers to classify the images in the training set. The convolution layers use the ReLU activation function and the output layer uses the softmax activation function. In both convolution layers, the kernel is 3x3, the stride is (1, 1), and no padding is used. Sixteen filters are used in the first convolution layer and 32 filters are used in the second convolution layer. A pooling layer and the dropout technique are used to increase performance. The CNN achieved a testing accuracy of 92.7% and a training accuracy of 94.2%. 

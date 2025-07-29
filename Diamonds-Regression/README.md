@@ -1,0 +1,2 @@
+# Diamonds Dataset: Building Regression Models from Scratch
+The Diamonds dataset contains information pertaining to the physical properties of diamonds and their prices. After exploratory data analysis and preprocessing, linear regression and ridge regression methods were built from scratch to predict diamond prices. OLS and ridge regression had comparable performance. This exercise deepened my understanding of the mechanisms behind the built-in functions we commonly use from data science libraries. 

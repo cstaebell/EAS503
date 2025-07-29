@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 #%% Import data and create data frame
-world_yearly_fp = 'C:/Users/cstae/Box/yearly_full_release_long_format.csv'
+world_yearly_fp = 'yearly_full_release_long_format.csv'
 world = pd.read_csv(world_yearly_fp)
 
 world.info()
@@ -43,7 +43,6 @@ ax2.set_xlabel('Year')
 fig.suptitle('Electricity Demand, 2000-2023', y=0.92)
 fig.legend(loc='center right', bbox_to_anchor=(1.05,.52))
 plt.subplots_adjust(wspace=0.1, hspace=0.1)
-#plt.savefig('C:/Users/cstae/Box/demand-vs-time.png', bbox_inches='tight')
 plt.show()
 
 # Calculate relationship between endpoints for discussion
@@ -79,7 +78,6 @@ colors = ['red', 'blue', 'orange', 'darkslategrey', 'whitesmoke', 'lightgrey']
 fig, ax = plt.subplots(figsize=(8,6))
 ax.pie(values, labels=labels, autopct='%1.1f%%', pctdistance=0.65, labeldistance=1.1, textprops={'fontsize': 11}, radius=1)
 plt.title('Average Electricity Demand from 2018-2023 \n as Share of Global Demand', y=0.94)
-#plt.savefig('C:/Users/cstae/Box/demand-pie.png', bbox_inches='tight')
 plt.show()
 
 #%% Create filters to view breakdown of fuel sources for world and US
@@ -156,8 +154,6 @@ ax2.set_title('United States')
 plt.subplots_adjust(wspace=0.03, hspace=0.05)
 plt.legend(ncol=3, bbox_to_anchor=(0.7, -0.105))
 plt.suptitle('Fuels for Electricity Generation Worldwide and in the US, 2000-2023')
-
-#plt.savefig('C:/Users/cstae/Box/gen-stacked-bars.png', bbox_inches='tight')
 plt.show()
 
 #%% Closer look at US from 2016 - 2022
@@ -184,7 +180,6 @@ ax1.axvline(x=2017, color='dimgrey', linestyle='--')
 ax1.axvline(x=2021, color='dimgrey', linestyle='--')
 ax1.set_ylabel('% of US Electricity Generation')
 
-#ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Bioenergy']['YoY % change'], label='Bioenergy')
 ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Hydro']['YoY % change'], 
          color='C2', linewidth=2.5, label='Hydroelectric')
 ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Solar']['YoY % change'],
@@ -198,7 +193,6 @@ ax2.axvline(x=2021, color='dimgrey', linestyle='--')
 ax2.legend(ncol = 3, bbox_to_anchor=(0.195, 1.01))
 
 ax1.set_title('Renewables for Electricity Generation in the US, 2015-2023')
-#plt.savefig('C:/Users/cstae/Box/us-renew-t1-lines.png', bbox_inches='tight')
 plt.show()
 
 #%% Repeat for fossil fuels
@@ -217,7 +211,6 @@ ax1.axvline(x=2017, color='dimgrey', linestyle='--')
 ax1.axvline(x=2021, color='dimgrey', linestyle='--')
 ax1.set_ylabel('% of US Electricity Generation')
 
-#ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Bioenergy']['YoY % change'], label='Bioenergy')
 ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Coal']['YoY % change'], 
          linewidth=2.5, label='Coal')
 ax2.plot(t1_yrs, us_t1_twh[us_t1_twh['Variable']=='Gas']['YoY % change'],
@@ -231,7 +224,6 @@ ax2.axvline(x=2021, color='dimgrey', linestyle='--')
 ax2.legend(ncol = 3, bbox_to_anchor=(0.138, 1.01))
 
 ax1.set_title('Fossil Fuels for Electricity Generation in the US, 2016-2022')
-#plt.savefig('C:/Users/cstae/Box/us-fossil-t1-lines.png', bbox_inches='tight')
 plt.show()
 
 #%% Look at hydro generation for story detail
